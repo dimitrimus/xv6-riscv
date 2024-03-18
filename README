@@ -1,3 +1,17 @@
+==Build on Arch Linux==
+Install gcc toolchain and qemu for riscv architecture emulation:
+```
+pacman -S qemu-system-riscv
+yay -S riscv-gnu-toolchain-bin
+```
+
+Build and run using installed toolchain:
+```
+TOOLPREFIX=riscv64-elf- make qemu
+```
+
+==Original Readme==
+
 xv6 is a re-implementation of Dennis Ritchie's and Ken Thompson's Unix
 Version 6 (v6).  xv6 loosely follows the structure and style of v6,
 but is implemented for a modern RISC-V multiprocessor using ANSI C.
